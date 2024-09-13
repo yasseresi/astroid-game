@@ -20,3 +20,10 @@ class CircleShape(pygame.sprite.Sprite):
     def update(self, dt):
         # sub-classes must override
         pass
+    def collegion (self, circle_shape) : 
+        distence = pygame.Vector2.distance_to(self.position,circle_shape.position)
+        radius_sum = self.radius + circle_shape.radius
+        if distence > radius_sum : 
+            return False
+        else : 
+            return True

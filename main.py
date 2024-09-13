@@ -1,3 +1,4 @@
+import sys
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 import pygame
@@ -36,6 +37,11 @@ def main():
 
         pygame.display.flip()
 
+
+        for ast in astroids :
+            if ast.collegion(player) : 
+                print("Game over!")
+                sys.exit()
         # limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
 
