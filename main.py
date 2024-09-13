@@ -45,6 +45,10 @@ def main():
             if ast.collegion(player) : 
                 print("Game over!")
                 sys.exit()
+            for bullet in shots : 
+                if bullet.collegion(ast) :
+                    ast.kill()
+        
         # limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
 
