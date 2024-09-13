@@ -47,7 +47,7 @@ def main():
                 sys.exit()
             for bullet in shots : 
                 if bullet.collegion(ast) :
-                    ast.kill()
+                    ast.split()
         
         # limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
